@@ -70,14 +70,14 @@ public:
 protected:
   virtual void transform_changed();
 
+  btKinematicCharacterController *_character;
+  btPairCachingGhostObject *_ghost;
+
 private:
   CPT(TransformState) _sync;
   bool _sync_disable;
 
   BulletUpAxis _up;
-
-  btKinematicCharacterController *_character;
-  btPairCachingGhostObject *_ghost;
 
   PT(BulletShape) _shape;
 
